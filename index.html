@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D Subscribe Input</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+	
+	<!---jQuery CDN--->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+
+<body>
+	<div class="cube"><i class="fas fa-cube"></i></div>
+
+	<h1>3-D Input for Subscription</h1>
+	<div id="cuboid">
+		<form>
+			<div>
+				<p class="cuboid-text">Subscribe to my newsletter</p>
+			</div>
+			<div>
+				<label for="submit" class="submit-icon">
+					<i class="fa fa-chevron-right"></i>
+				</label>
+				<input type="text" id="email" class="cuboid-text" 
+				placeholder="Enter Email" />
+				<input type="submit" id="submit" name="submit">
+			</div>
+			<div>
+				<p class="cuboid-text loader">Hold on a Bit!</p>
+			</div>
+			<div>
+				<span class="reset-icon"><i class="fa fa-refresh"></i></span>
+				<p class="cuboid-text">Thankyou for subscribing!! :)</p>
+			</div>
+		</form>
+		
+	</div>
+
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

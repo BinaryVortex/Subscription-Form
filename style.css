@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background:#ff5e57;
+  padding-top: 150px;
+  padding-left: 150px;
+  text-align: center;
+  font-family: 'Itim', cursive;
+}
+h1{
+  font-weight:normal;
+  font-size: 36px;
+  margin-bottom: 75px;
+  padding-top: 100px;
+  color: white;
+
+}
+.cube i{
+  transform: scale(10);
+  opacity: 0.1;
+}
+
+#cuboid{
+  width: 800px;
+  margin: 0 auto;
+  perspective: 1000px;
+  padding: 10px;
+
+}
+
+#cuboid form{
+  transform: translateZ(-20px);
+  transform-style: preserve-3d;
+  height: 40px;
+  transition: all 0.35s;
+  padding: 10px;
+  text-align: center;
+}
+.cuboid-text{
+  line-height: 40px;
+  height: 40px;
+  background:#55efc4;
+  padding: 10px;
+}
+.loader{
+  background:#55efc4;
+  animation: phase 1s infinite;
+  border:0 none;
+  outline: none;
+}
+@keyframes phase{
+  50%{
+    background:#00b894;
+  }
+}
+#email{
+  background:white;
+  outline: none;
+  border:0 none;
+  text-align: left;
+  color: #130f40;
+  display: block;
+  width: 100%;
+  padding:0 10px;
+  box-sizing: border-box;
+}
+#submit{
+  display: none;
+}
+.submit-icon,.reset-icon{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgba(0,0,0,0.25);
+  line-height: 40px;
+  padding: 0 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+#cuboid div{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#cuboid div:nth-child(1){
+  transform: rotateX(0deg) translateZ(20px);
+}
+#cuboid div:nth-child(2){
+  transform: rotateX(-90deg) translateZ(20px);
+}
+#cuboid div:nth-child(3){
+  transform: rotateX(-180deg) translateZ(20px);
+}
+#cuboid div:nth-child(4){
+  transform: rotateX(-270deg) translateZ(20px);
+}
+
+#cuboid form:hover,
+#cuboid form.ready{transform: translateZ(-20px) rotateX(90deg);}
+#cuboid form.loading{transform: translateZ(-20px) rotateX(180deg);}
+#cuboid form.complete{transform: translateZ(-20px) rotateX(270deg);}
